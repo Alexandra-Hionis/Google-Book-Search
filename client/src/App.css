@@ -3,7 +3,15 @@
   height: 200px;
 }
 
+
+
+
 /* header styles */
 .header {
-  margin-bottom: 100px;  
+  color: black;
+  border: 3px solid hotpink;
+  margin: 10%;
+  padding: 5%;
+  text-align: center;
+ 
 }
