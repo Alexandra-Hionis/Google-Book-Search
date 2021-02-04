@@ -4,7 +4,6 @@ import './App.css';
 import Nav from "./components/Nav.js"
 import SearchBooks from "./pages/SearchPage"
 import SavedBooks from "./pages/SavePage"
-import Header from "./components/Header.js"
 import SearchPage from "./pages/SearchPage.js"
 import BooksResultsContainer from "./components/BooksResultsContainer"
 
@@ -31,8 +30,8 @@ function App() {
     <Route exact path="/SavePage" component={SavedBooks} />
     </Wrapper>
     
-    <Header />
-    <BooksResultsContainer />
+    <SearchPage />
+   
    
     
       </Router>

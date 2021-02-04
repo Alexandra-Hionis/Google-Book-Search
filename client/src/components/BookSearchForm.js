@@ -20,7 +20,7 @@ function BookSearchForm () {
         placeholder="ex: Food"
         />
             
-            <button type="submit">Search</button>
+            <button type="submit" className="btn btn-primary">Search</button>
 
     </form>
     </div>
