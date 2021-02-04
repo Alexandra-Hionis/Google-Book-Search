@@ -4,14 +4,24 @@
 }
 
 
-
+.row {
+  border: 3px solid black;
+  margin: 7% 5% 5% 5%;
+}
 
 /* header styles */
 .header {
   color: black;
-  border: 3px solid hotpink;
-  margin: 10%;
-  padding: 5%;
+  
+  padding: 3% 5% 5% 5%;
   text-align: center;
- 
+  white-space: nowrap;
+}
+
+#header-title {
+  font-size: 7vh;
+}
+
+#header-sub-title {
+  font-size: 3vh;
 }

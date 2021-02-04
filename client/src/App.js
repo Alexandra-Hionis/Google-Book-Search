@@ -24,9 +24,9 @@ function App() {
     <Route exact path="/SearchPage" component={SearchBooks} />
     <Route exact path="/SavePage" component={SavedBooks} />
     </Wrapper>
-    <div>
+    
     <Header />
-    </div>
+   
     
       </Router>
   );

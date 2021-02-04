@@ -1,17 +1,17 @@
 import React from "react";
 import '../App.css';
-import Logo from "../images/google-books-logo.png";
 import Row from "./Row.js";
 import Col from "./Col.js";
 
-function Container() {
+function Header() {
     return (
         
         <div className="header">
-            <Row>
-                <Col size="sm-12">
+            <Row className="row">
+                <Col className="col" size="sm-12">
              
-            <h1>Welcome to Goole Books!</h1>
+            <p id="header-title">Welcome to Goole Books!</p>
+            <p id="header-sub-title">Search and save books</p>
 
             </Col>
             </Row>
@@ -20,4 +20,4 @@ function Container() {
     );
 }
 
-export default Container;
+export default Header;
