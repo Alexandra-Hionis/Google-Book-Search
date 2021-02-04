@@ -9,12 +9,12 @@ class BooksResultsContainer extends Component {
     render() {
         return(
             <Container>
-            <div>
+            {/* <div>
             
                 <BookSearchForm />
                 
-            </div>
-            <div>
+            </div> */}
+            <div id="results">
             <Row className="row">
             <Col className="col" size="sm-12">
                 <h3>Results</h3>
