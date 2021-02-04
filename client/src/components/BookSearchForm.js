@@ -4,6 +4,7 @@ import '../App.css';
 import Row from "../components/Row.js";
 import Col from "../components/Col.js";
 
+// form for searching the google books API
 
 function BookSearchForm () {
   const [searchTerm, setSearchTerm] = useState('');
@@ -12,10 +13,11 @@ function BookSearchForm () {
   }
 
   return (
-    <Row className="row">
-    <Col className="col" size="sm-12">
+    
     <section>
-      <form >
+        <Row className="row">
+    <Col className="col" size="sm-12">
+      <form className="search-form">
       {/* <form onSubmit={onSubmitHandler}> */}
         <label>
           <span>Search for books</span>
@@ -28,9 +30,10 @@ function BookSearchForm () {
           <button type="submit">Search</button>
         </label>
       </form>
-    </section>
+    
     </Col>
     </Row>
+    </section>
   );
 }
 
