@@ -1,24 +1,8 @@
-// import React from "react";
-// import '../App.css';
-// import Logo from "../images/google-books-logo.png";
-// import Row from "./Row.js";
-// import Col from "./Col.js";
+  
+import React from "react";
 
-// function Container() {
-//     return (
-        
-//         <div className="header">
-//             <Row>
-//                 <Col size="sm-12">
-//             <div className="header">
-//             {/* <img src={Logo} class="navbar-brand" alt="logo"/> */}
-//             <h1>Welcome to Goole Books!</h1>
-//             </div>
-//             </Col>
-//             </Row>
-//         </div>
-       
-//     );
-// }
+function Container(props) {
+  return <div className="container" style={props.style}>{props.children}</div>;
+}
 
-// export default Container;
+export default Container;

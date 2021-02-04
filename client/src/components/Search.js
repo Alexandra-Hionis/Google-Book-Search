@@ -1,19 +1,18 @@
 import React from "react";
 import '../App.css';
-import Logo from "../images/google-books-logo.png";
-import Row from "./Row.js";
-import Col from "./Col.js";
+import Row from "../components/Row.js";
+import Col from "../components/Col.js";
 
 function Search() {
     return (
         
-        <div className="header">
-            <Row>
-                <Col size="sm-12">
-            <div className="header">
-            {/* <img src={Logo} class="navbar-brand" alt="logo"/> */}
-            <h1>Welcome to Goole Books!</h1>
-            </div>
+        <div>
+            <Row className="row">
+                <Col className="col" size="sm-12">
+             
+            <p>HI</p>
+            <p>Search and save books</p>
+
             </Col>
             </Row>
         </div>

@@ -5,6 +5,8 @@ import Nav from "./components/Nav.js"
 import SearchBooks from "./pages/SearchPage"
 import SavedBooks from "./pages/SavePage"
 import Header from "./components/Header.js"
+import BookSearchForm from "./components/BookSearchForm.js"
+
 
 function Wrapper(props) {
   return (
@@ -26,6 +28,7 @@ function App() {
     </Wrapper>
     
     <Header />
+    <BookSearchForm  />
    
     
       </Router>
