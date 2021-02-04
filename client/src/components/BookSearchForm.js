@@ -7,33 +7,26 @@ import Col from "../components/Col.js";
 // form for searching the google books API
 
 function BookSearchForm () {
-  const [searchTerm, setSearchTerm] = useState('');
-  const onInputChange = (e) => {
-    setSearchTerm(e.target.value);
-  }
+  
+  
 
   return (
-    
-    <section>
-        <Row className="row">
+    <Row className="row">
     <Col className="col" size="sm-12">
-      <form className="search-form">
-      {/* <form onSubmit={onSubmitHandler}> */}
-        <label>
-          <span>Search for books</span>
-          <input
-            type="search"
-            placeholder="food, classical music, etc."
-            value={searchTerm}
-            onChange={onInputChange}
-          />
-          <button type="submit">Search</button>
-        </label>
-      </form>
-    
+    <div className="search-area">
+        
+    <form action=""> Search Books
+        <input type="text" 
+        placeholder="ex: Food"
+        />
+            
+            <button type="submit">Search</button>
+
+    </form>
+    </div>
     </Col>
     </Row>
-    </section>
+    
   );
 }
 

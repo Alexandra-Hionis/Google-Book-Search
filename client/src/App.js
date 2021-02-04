@@ -5,7 +5,8 @@ import Nav from "./components/Nav.js"
 import SearchBooks from "./pages/SearchPage"
 import SavedBooks from "./pages/SavePage"
 import Header from "./components/Header.js"
-import BookSearchForm from "./components/BookSearchForm.js"
+import SearchPage from "./pages/SearchPage.js"
+import BooksResultsContainer from "./components/BooksResultsContainer"
 
 
 function Wrapper(props) {
@@ -21,14 +22,17 @@ function Wrapper(props) {
 function App() {
   return (
     <Router>
-      <Route exact path="/SearchPage" component={SearchBooks} />
+      
     <Wrapper>
+   
     <Route exact path="/SearchPage" component={SearchBooks} />
+   
+    
     <Route exact path="/SavePage" component={SavedBooks} />
     </Wrapper>
     
     <Header />
-    <BookSearchForm  />
+    <BooksResultsContainer />
    
     
       </Router>
