@@ -4,6 +4,8 @@ import Header from "../components/Header.js"
 import BookSearchForm from "../components/BookSearchForm.js";
 import Container from "../components/Container.js";
 import BooksResultsContainer from "../components/BooksResultsContainer.js";
+import axios from 'axios';
+// import API from '../utils/API'
 
 class SearchPage extends Component {
     // constructor call pass in props
@@ -15,18 +17,35 @@ class SearchPage extends Component {
             searchField: ''
         }
 
+       // filter results
+//   componentDidMount() {
+//     API.getData()
+//     .then(books => {
+//       this.setState({
+//         allBooks: books.data.results,
+//         filteredResults: books.data.results
+//       })
+//     })
+//   }
+
     }
+
+    
+
+
 
     // create a method to set up functionality to update state when we type in input box / search field. Sets our state everytime we type into input box. Add parameter "e" (event) so everytime we type in into input box, we're going to get this parameter which is going to be the event.
 
     // Everytime we type into input box, it's going to fire an event so we grab that event (e) and property e.target.value which value will bee whatever key we enter (whatever we type in)
+
+    //  we want to pass this method into our BookSearchForm components so our search area will have access to this function. So we pass it in as a prop and whenever you pass something in as a prop, you can name it whatever you want ex: handleSearch to keep it the same in this case. this.handleSearch will grab the handleSearch method
 
     handleSearch = (e) => {
         console.log(e.target.value);
         this.setState({ searchField :e.target.value })
     }
 
-//  we want to pass this method into our BookSearchForm components so our search area will have access to this function. So we pass it in as a prop and whenever you pass something in as a prop, you can name it whatever you want ex: handleSearch to keep it the same in this case. this.handleSearch will grab the handleSearch method
+
 
     render() {
         return(
