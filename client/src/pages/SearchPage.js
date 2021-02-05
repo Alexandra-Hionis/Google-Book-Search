@@ -1,6 +1,5 @@
 // This components renders out search area and book results list
 import React, {Component} from "react";
-import Header from "../components/Header.js" 
 import BookSearchForm from "../components/BookSearchForm.js";
 import Container from "../components/Container.js";
 import BookList from "../components/BookList.js";
@@ -36,8 +35,6 @@ class SearchPage extends Component {
                 
               
           };
-        
-
 
     // create a method to set up functionality to update state when we type in input box / search field. Sets our state everytime we type into input box. Add parameter "e" (event) so everytime we type in into input box, we're going to get this parameter which is going to be the event.
 
@@ -50,16 +47,17 @@ class SearchPage extends Component {
         this.setState({ searchField :e.target.value })
     }
 
-    
-    
+    handleFormSubmit = event => {
+        event.preventDefault();
+        this.searchBook(this.state.search);
+    };
+
     render() {
         console.log(this.state.books)
         return(
             <Container>
-                <Header />
-                
             
-           <BookSearchForm handleSearch={this.handleSearch} searchBook={this.searchBook}/>
+           <BookSearchForm handleSearch={this.handleSearch} searchBook={this.searchBook} handleFormSubmit={this.handleFormSubmit}/>
            {/* pass down prop to our BookList */}
             <BookList books={this.state.books}/>
             

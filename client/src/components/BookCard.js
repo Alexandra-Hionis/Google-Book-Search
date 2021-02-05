@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import Row from "../components/Row.js";
 import Col from "../components/Col.js";
+// import SaveBtn from "../components/SaveBtn.js";
 
 const BookCard = (props) => {
   
@@ -22,11 +23,18 @@ const BookCard = (props) => {
       <h5 className="card-title">{props.title}</h5>
       <p className="card-text">Author: {props.author}</p>
       <p className="card-text">{props.description}</p>
-
+      <div id="wrapper">
+      <a href="#" class="btn btn-info">View</a>
+    <a href="#" class="btn btn-success">Save</a>
+    </div>
     </div>
   </div>
 </div>
 </div>
+
+{/* <SaveBtn /> */}
+
+
 </Col>
 </Row>
     

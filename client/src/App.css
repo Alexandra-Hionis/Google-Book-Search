@@ -30,8 +30,23 @@
   white-space: nowrap;
 }
 
+
 /* book list styles */
 .list {
 margin-top: 5%;
 border: solid 4px orange; 
+}
+
+.card-img {
+  width: 20%;
+}
+
+.btn {
+  margin: 5px;
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
