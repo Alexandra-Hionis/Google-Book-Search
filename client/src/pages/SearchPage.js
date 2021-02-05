@@ -3,7 +3,6 @@ import React, {Component} from "react";
 import Header from "../components/Header.js" 
 import BookSearchForm from "../components/BookSearchForm.js";
 import Container from "../components/Container.js";
-import BooksResultsContainer from "../components/BooksResultsContainer.js";
 import axios from 'axios';
 // import API from '../utils/API'
 
@@ -16,22 +15,17 @@ class SearchPage extends Component {
             books: [],
             searchField: ''
         }
-
-       // filter results
-//   componentDidMount() {
-//     API.getData()
-//     .then(books => {
-//       this.setState({
-//         allBooks: books.data.results,
-//         filteredResults: books.data.results
-//       })
-//     })
-//   }
-
     }
-
-    
-
+      
+     //  set up second method to make our request to Google Books Api
+        // request.get("https://www.googleapis.com/books/v1/volumes")
+        searchBook = (e) => {
+            e.preventDefault()
+            const url = "https://www.googleapis.com/books/v1/volumes?q="
+            axios.get(url + this.state.searchField)
+              .then(data => console.log(data))
+          };
+        
 
 
     // create a method to set up functionality to update state when we type in input box / search field. Sets our state everytime we type into input box. Add parameter "e" (event) so everytime we type in into input box, we're going to get this parameter which is going to be the event.
@@ -45,21 +39,21 @@ class SearchPage extends Component {
         this.setState({ searchField :e.target.value })
     }
 
-
-
+    
+    
     render() {
         return(
             <Container>
                 <Header />
             
             
-           <BookSearchForm handleSearch={this.handleSearch} />
+           <BookSearchForm handleSearch={this.handleSearch} searchBook={this.searchBook}/>
 
-           <BooksResultsContainer />
             
            </Container>
         );
     }
 }
+
 
 export default SearchPage;
