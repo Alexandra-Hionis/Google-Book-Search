@@ -11,12 +11,12 @@ const BookCard = (props) => {
     // <Row className="row">
     // <Col className="col" size="sm-12">
    
-    // </Col>
+    // </Col> 
     // </Row>
 
-    <div className="card-container">
+    <div className="card">
        <img src={props.image} alt="" />
-       <div className="desc">
+       <div className="card-body">
            <h2>{props.title}</h2>
            <h3>{props.author}</h3>
            <p>{props.description}</p>

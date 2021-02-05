@@ -30,10 +30,8 @@
   white-space: nowrap;
 }
 
-/* results container */
-
-#results {
-  margin-top: 5%;
-  border: solid 4px orange;
-
+/* book list styles */
+.list {
+margin-top: 5%;
+border: solid 4px orange; 
 }
