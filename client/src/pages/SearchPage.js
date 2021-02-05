@@ -24,12 +24,16 @@ class SearchPage extends Component {
             e.preventDefault()
             const url = "https://www.googleapis.com/books/v1/volumes?q="
             axios.get(url + this.state.searchField)
-              .then(data => console.log(data))
-              .then((data) => {
-                //   use spread operator to grab our items into the items array and spreading it out to the array made here
-                  this.setState({ books: [...data.items]})
-                //   ...data.items]
+            //   .then(data => console.log(data))
+            .then(data => {
+                console.log(data);
+                //   use spread operator to grab our items into the items array and spreading it out to the array made here (i think)
+                this.setState({ books: data.items});
               })
+              
+                
+                 
+              
           };
         
 
