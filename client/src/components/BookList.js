@@ -1,8 +1,8 @@
 import React from 'react';
 import '../App.css';
 import BookCard from './BookCard.js';
-// import Row from "../components/Row.js";
-// import Col from "../components/Col.js";
+import Row from "../components/Row.js";
+import Col from "../components/Col.js";
 
 const BookList = (props) => {
   console.log(props.books);
@@ -11,11 +11,11 @@ const BookList = (props) => {
   return (
 
     <div className="list">
-        {/* <Row className="row">
+        <Row className="row">
         <Col className="col" size="sm-12">
             <h3>Results</h3>
         </Col>
-        </Row> */}
+        </Row>
         {
             // contains prop called books which will contain data of the state of books and then we map over that book data, for every object for that array were going to create a book card component
             // But what if the props object does not have the books property initially?
