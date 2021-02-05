@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import Header from "../components/Header.js" 
 import BookSearchForm from "../components/BookSearchForm.js";
 import Container from "../components/Container.js";
+import BookList from "../components/BookList.js";
 import axios from 'axios';
 // import API from '../utils/API'
 
@@ -58,7 +59,8 @@ class SearchPage extends Component {
             
             
            <BookSearchForm handleSearch={this.handleSearch} searchBook={this.searchBook}/>
-
+           {/* pass down prop to our BookList */}
+            <BookList books={this.state.books}/>
             
            </Container>
         );
