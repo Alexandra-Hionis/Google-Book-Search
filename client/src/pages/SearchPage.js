@@ -11,6 +11,7 @@ class SearchPage extends Component {
     constructor(props){
         super(props);
         // create state. App will contain books and data of books set to empty array. Add property called searchField to update the state of the app while everytime we add to input box. Meaning want to make sure state gets updated to whatever is inside search field. Search for dogs, than might search for food.
+
         this.state = {
             books: [],
             searchField: ''
@@ -24,6 +25,11 @@ class SearchPage extends Component {
             const url = "https://www.googleapis.com/books/v1/volumes?q="
             axios.get(url + this.state.searchField)
               .then(data => console.log(data))
+              .then((data) => {
+                //   use spread operator to grab our items into the items array and spreading it out to the array made here
+                  this.setState({ books: [...data.items]})
+                //   ...data.items]
+              })
           };
         
 
