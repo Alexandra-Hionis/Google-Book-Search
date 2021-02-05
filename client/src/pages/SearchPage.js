@@ -26,14 +26,14 @@ class SearchPage extends Component {
             const url = "https://www.googleapis.com/books/v1/volumes?q="
             axios.get(url + this.state.searchField)
             //   .then(data => console.log(data))
-            .then(data => {
+            .then(({data}) => {
                 console.log(data);
                 //   use spread operator to grab our items into the items array and spreading it out to the array made here (i think)
                 this.setState({ books: data.items});
               })
               
                 
-                 
+                
               
           };
         
@@ -53,18 +53,21 @@ class SearchPage extends Component {
     
     
     render() {
+        console.log(this.state.books)
         return(
             <Container>
                 <Header />
-            
+                
             
            <BookSearchForm handleSearch={this.handleSearch} searchBook={this.searchBook}/>
            {/* pass down prop to our BookList */}
             <BookList books={this.state.books}/>
             
+            
            </Container>
         );
     }
+    
 }
 
 

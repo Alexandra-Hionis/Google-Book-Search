@@ -5,14 +5,11 @@ import BookCard from './BookCard.js';
 // import Col from "../components/Col.js";
 
 const BookList = (props) => {
-  
+  console.log(props.books);
   
 //  renders out all of the book cards
   return (
-   
-        
-        
-       
+
     <div className="list">
         {/* <Row className="row">
         <Col className="col" size="sm-12">
