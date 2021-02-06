@@ -25,7 +25,10 @@ module.exports = {
     db.Book
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err => {
+        console.error(err)
+        res.status(422).json(err)
+      });
   },
   remove: function(req, res) {
     db.Book

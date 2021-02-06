@@ -47,10 +47,7 @@ class SearchPage extends Component {
         this.setState({ searchField :e.target.value })
     }
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        this.searchBook(this.state.search);
-    };
+  
 
     render() {
         console.log(this.state.books)
@@ -59,7 +56,7 @@ class SearchPage extends Component {
             
            <BookSearchForm handleSearch={this.handleSearch} searchBook={this.searchBook} handleFormSubmit={this.handleFormSubmit}/>
            {/* pass down prop to our BookList */}
-            <BookList books={this.state.books}/>
+            <BookList />
             
             
            </Container>
