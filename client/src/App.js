@@ -4,7 +4,7 @@ import './App.css';
 import Nav from "./components/Nav.js"
 import Header from "./components/Header.js"
 import SearchPage from "./pages/SearchPage"
-import SearchResults from "./components/Header.js"
+
 
 
 

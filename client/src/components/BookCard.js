@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import Row from "../components/Row.js";
 import Col from "../components/Col.js";
-// import SaveBtn from "../components/SaveBtn.js";
+
 
 const BookCard = (props) => {
   
@@ -24,16 +24,20 @@ const BookCard = (props) => {
       <p className="card-text">Author: {props.author}</p>
       <p className="card-text">{props.description}</p>
       <div id="wrapper">
-      <a href="#" class="btn btn-info">View</a>
-    <a href="#" class="btn btn-success">Save</a>
-    </div>
+      <button className="saveBook btn btn-primary" id={props.id} onClick={props.handleSavedButton}> 
+                                            Save Book
+                                        </button>
+                                        <a href={props.link} target="_blank" />
+                                            <button className="viewBook btn btn-success">
+                                                View Book
+                                        </button>
+    
     </div>
   </div>
 </div>
 </div>
 
-{/* <SaveBtn /> */}
-
+</div>
 
 </Col>
 </Row>
