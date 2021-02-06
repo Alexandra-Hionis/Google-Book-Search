@@ -27,7 +27,7 @@ const BookCard = (props) => {
       <button className="saveBook btn btn-primary" id={props.id} onClick={props.handleSavedButton}> 
                                             Save Book
                                         </button>
-                                        <a href={props.link} target="_blank" />
+                                        <a href={props.view} target="_blank" />
                                             <button className="viewBook btn btn-success">
                                                 View Book
                                         </button>

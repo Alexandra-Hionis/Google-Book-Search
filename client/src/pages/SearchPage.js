@@ -5,6 +5,7 @@ import Container from "../components/Container.js";
 import BookList from "../components/BookList.js";
 import axios from 'axios';
 import API from '../utils/API'
+
 class SearchPage extends Component {
     // constructor call pass in props
     constructor(props){
@@ -17,7 +18,7 @@ class SearchPage extends Component {
     }
       
      //  set up second method to make our request to Google Books Api
-        // request.get("https://www.googleapis.com/books/v1/volumes")
+       
         searchBook = (e) => {
             e.preventDefault()
             const url = "https://www.googleapis.com/books/v1/volumes?q="

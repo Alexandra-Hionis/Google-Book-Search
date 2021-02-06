@@ -27,10 +27,12 @@ const BookList = (props) => {
                 return <BookCard 
                 // whenever in react and mapping and looping over datat and creatign components, added key to avoid error
                 key={i}
+                id={book.id}
                 image={book.volumeInfo.imageLinks.thumbnail}
                 title={book.volumeInfo.title}
                 author={book.volumeInfo.authors}
                 description={book.volumeInfo.description}
+                view={book.selfLink}
                 />
                 
             })
