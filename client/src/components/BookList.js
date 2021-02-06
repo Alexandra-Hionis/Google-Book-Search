@@ -32,6 +32,7 @@ const BookList = (props) => {
                 title={book.volumeInfo.title}
                 author={book.volumeInfo.authors}
                 description={book.volumeInfo.description}
+                handleSavedButton={props.handleSavedButton}
                 view={book.selfLink}
                 />
                 

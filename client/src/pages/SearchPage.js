@@ -55,7 +55,16 @@ class SearchPage extends Component {
         console.log(this.state.books)
         let savedBooks = this.state.books.filter(book => book.id === event.target.id)
         savedBooks = savedBooks[0];
-        API.saveBook(savedBooks)
+        console.log(savedBooks)
+        // api looking for title author..
+        const saveBook = {
+            title: savedBooks.volumeInfo.title,
+            author: savedBooks.volumeInfo.authors[0],
+            description: savedBooks.volumeInfo.description,
+            date: savedBooks.volumeInfo.publishedDate
+
+        }
+        API.saveBook(saveBook)
             .then(this.setState({ message: alert("Your book is saved") }))
             .catch(err => console.log(err))
     }
