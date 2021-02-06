@@ -17,6 +17,10 @@ React Bootstrap Express Mongoose React-Bootstrap React-Router
 
 ## Usage
 Great for general interest in book searches or purchases
+
+project specifics.
+![image 1](client/src/assets/images/screenshot.png)
+
  
 ## License
 ISC

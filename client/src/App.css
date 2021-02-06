@@ -3,10 +3,10 @@
   height: 200px;
 }
 
-
+/* 
 .row {
   border: 3px solid black;
-}
+} */
 
 /* header styles */
 .header {
@@ -34,7 +34,6 @@
 /* book list styles */
 .list {
 margin-top: 5%;
-border: solid 4px orange; 
 }
 
 .card-img {
